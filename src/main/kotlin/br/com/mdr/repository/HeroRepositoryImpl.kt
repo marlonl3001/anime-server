@@ -4,8 +4,8 @@ import br.com.mdr.models.Anime
 import br.com.mdr.models.ApiResponse
 import br.com.mdr.models.Hero
 
-private const val NEXT_PAGE_KEY = "nextPage"
-private const val PREVIOUS_PAGE_KEY = "prevPage"
+const val NEXT_PAGE_KEY = "nextPage"
+const val PREVIOUS_PAGE_KEY = "prevPage"
 class HeroRepositoryImpl: HeroRepository {
 
     override val heroes: Map<Int, List<Hero>> by lazy {
