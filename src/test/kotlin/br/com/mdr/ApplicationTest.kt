@@ -34,11 +34,12 @@ class ApplicationTest {
     fun `access all heroes endpoint, query all pages, assert correct information`() =
         testApplication {
             val heroRepository = HeroRepositoryImpl()
-            val pages = 1..3
+            val pages = 1..4
             val heroes = listOf(
                 heroRepository.page1,
                 heroRepository.page2,
-                heroRepository.page3
+                heroRepository.page3,
+                heroRepository.page4
             )
             pages.forEach { page ->
                 val response = client.get("/heroes?page=$page")
@@ -154,17 +155,17 @@ class ApplicationTest {
         var prevPage: Int? = page
         var nextPage: Int? = page
 
-        if (page in 1..2) {
+        if (page in 1..3) {
             nextPage = page.plus(1)
         }
-        if (page in 2..3) {
+        if (page in 3..4) {
             prevPage = page.minus(1)
         }
         if (page == 1) {
             prevPage = null
         }
 
-        if (page == 3) {
+        if (page == 4) {
             nextPage = null
         }
 

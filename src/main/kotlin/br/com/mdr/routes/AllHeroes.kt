@@ -18,7 +18,7 @@ fun Route.getAllHeroes() {
         try {
             val page = call.request.queryParameters["page"]?.toInt() ?: DEFAULT_PAGE
             //Define the range of pages available to send with response
-            require(page in 1..3)
+            require(page in 1..4)
 
             val apiResponse = repository.getAllHeroes(page)
 

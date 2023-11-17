@@ -12,14 +12,45 @@ class HeroRepositoryImpl: HeroRepository {
         mapOf(
             1 to page1,
             2 to page2,
-            3 to page3
+            3 to page3,
+            4 to page4
         )
     }
 
     override val page1 = listOf(
         Hero(
             id = 1,
-            Anime.NARUTO.animeName,
+            anime = Anime.ONE_PIECE.animeName,
+            name = "Monkey D. Luffy",
+            image = "/images/luffy.jpg",
+            about = "Monkey D. Luffy, also known as \"Straw Hat Luffy\" and commonly as \"Straw Hat\",[10] is the founder and captain of the increasingly infamous and powerful Straw Hat Pirates, as well as the most powerful of its top fighters.[26][27] He desires to find the legendary treasure left behind by the late Gol D. Roger and thereby become the Pirate King,[28] which would help facilitate an unknown dream of his that he has told only to Shanks, his brothers, and crew.[29][30] He believes that being the Pirate King means having the most freedom in the world.[31]",
+            rating = 5.0,
+            power = 105,
+            month = "May",
+            day = "5th",
+            family = listOf(
+                "Monkey D. Dragon",
+                "Monkey D. Garp",
+                "Portgas D. Ace",
+                "Curly Dadan",
+                "Sabo",
+                "Family Tree"
+            ),
+            abilities = listOf(
+                "Rifle",
+                "Ogon Rifle",
+                "Elephant Gun",
+                "Kane",
+                "Red Hawk"
+            ),
+            natureTypes = listOf(
+                "Rubber",
+                "Fire"
+            )
+        ),
+        Hero(
+            id = 2,
+            anime = Anime.NARUTO.animeName,
             name = "Sasuke",
             image = "/images/sasuke.jpg",
             about = "Sasuke Uchiha (うちはサスケ, Uchiha Sasuke) is one of the last surviving members of Konohagakure's Uchiha clan. After his older brother, Itachi, slaughtered their clan, Sasuke made it his mission in life to avenge them by killing Itachi. He is added to Team 7 upon becoming a ninja and, through competition with his rival and best friend, Naruto Uzumaki.",
@@ -50,7 +81,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 2,
+            id = 3,
             Anime.NARUTO.animeName,
             name = "Naruto",
             image = "/images/naruto.jpg",
@@ -80,7 +111,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 3,
+            id = 4,
             Anime.NARUTO.animeName,
             name = "Sakura",
             image = "/images/sakura.jpg",
@@ -108,7 +139,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 4,
+            id = 5,
             Anime.NARUTO.animeName,
             name = "Boruto",
             image = "/images/boruto.png",
@@ -135,9 +166,11 @@ class HeroRepositoryImpl: HeroRepository {
                 "Wind",
                 "Water"
             )
-        ),
+        )
+    )
+    override val page2 = listOf(
         Hero(
-            id = 5,
+            id = 6,
             Anime.NARUTO.animeName,
             name = "Sarada",
             image = "/images/sarada.jpg",
@@ -160,11 +193,9 @@ class HeroRepositoryImpl: HeroRepository {
                 "Wind",
                 "Fire"
             )
-        )
-    )
-    override val page2 = listOf(
+        ),
         Hero(
-            id = 6,
+            id = 7,
             Anime.NARUTO.animeName,
             name = "Mitsuki",
             image = "/images/mitsuki.jpg",
@@ -188,7 +219,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 7,
+            id = 8,
             Anime.NARUTO.animeName,
             name = "Kawaki",
             image = "/images/kawaki.jpg",
@@ -210,7 +241,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 8,
+            id = 9,
             Anime.NARUTO.animeName,
             name = "Orochimaru",
             image = "/images/orochimaru.jpg",
@@ -235,9 +266,11 @@ class HeroRepositoryImpl: HeroRepository {
                 "Earth",
                 "Water"
             )
-        ),
+        )
+    )
+    override val page3 = listOf(
         Hero(
-            id = 9,
+            id = 10,
             Anime.NARUTO.animeName,
             name = "Kakashi",
             image = "/images/kakashi.png",
@@ -260,11 +293,9 @@ class HeroRepositoryImpl: HeroRepository {
                 "Earth",
                 "Water"
             )
-        )
-    )
-    override val page3 = listOf(
+        ),
         Hero(
-            id = 10,
+            id = 11,
             Anime.NARUTO.animeName,
             name = "Isshiki",
             image = "/images/ishiki.jpg",
@@ -288,7 +319,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 11,
+            id = 12,
             Anime.NARUTO.animeName,
             name = "Momoshiki",
             image = "/images/momoshiki.jpg",
@@ -314,7 +345,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 12,
+            id = 13,
             Anime.NARUTO.animeName,
             name = "Urashiki",
             image = "/images/urashiki.jpg",
@@ -339,7 +370,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 13,
+            id = 14,
             Anime.NARUTO.animeName,
             name = "Code",
             image = "/images/code.jpg",
@@ -361,7 +392,7 @@ class HeroRepositoryImpl: HeroRepository {
             )
         ),
         Hero(
-            id = 14,
+            id = 15,
             Anime.NARUTO.animeName,
             name = "Amado",
             image = "/images/amado.jpg",
@@ -381,9 +412,12 @@ class HeroRepositoryImpl: HeroRepository {
             natureTypes = listOf(
                 "Unknown"
             )
-        ),
+        )
+    )
+
+    override val page4 = listOf(
         Hero(
-            id = 15,
+            id = 16,
             Anime.NARUTO.animeName,
             name = "Koji",
             image = "/images/koji.jpg",
@@ -404,6 +438,33 @@ class HeroRepositoryImpl: HeroRepository {
                 "Fire",
                 "Earth"
             )
+        ),
+        Hero(
+            id = 17,
+            anime = Anime.BLEACH.animeName,
+            name = "Kurosaki Ichigo",
+            image = "/images/ichigo.jpg",
+            about = "Ichigo Kurosaki (黒崎 一護, Kurosaki Ichigo) is a Human who is also a Substitute Shinigami. Ichigo is the son of Isshin and Masaki Kurosaki, and older brother of Karin and Yuzu. He is also married to Orihime Inoue and has a son named Kazui Kurosaki.",
+            rating = 3.9,
+            power = 99,
+            month = "July",
+            day = "15th",
+            family = listOf(
+                "Orihime Inoue",
+                "Kazui Kurosaki",
+                "Isshin Kurosaki",
+                "Masaki Kurosaki",
+                "Karin Kurosaki",
+                "Yuzu Kurosaki",
+                "Uryū Ishida"
+            ),
+            abilities = listOf(
+                "Zangetsu",
+                "Tensa Zangetsu"
+            ),
+            natureTypes = listOf(
+                "Reiatsu"
+            )
         )
     )
 
@@ -413,7 +474,8 @@ class HeroRepositoryImpl: HeroRepository {
             "ok",
             prevPage = calculatePage(actualPage)[PREVIOUS_PAGE_KEY],
             nextPage = calculatePage(actualPage)[NEXT_PAGE_KEY],
-            heroes = heroes[actualPage] ?: emptyList()
+            heroes = heroes[actualPage] ?: emptyList(),
+            lastUpdated = System.currentTimeMillis()
         )
     }
 
@@ -426,20 +488,20 @@ class HeroRepositoryImpl: HeroRepository {
     }
 
     private fun calculatePage(page: Int): Map<String, Int?> {
-        var prevPage: Int? = null
-        var nextPage: Int? = null
+        var prevPage: Int? = page
+        var nextPage: Int? = page
 
-        if (page in 1..2) {
+        if (page in 1..3) {
             nextPage = page.plus(1)
         }
-        if (page in 2..3) {
+        if (page in 3..4) {
             prevPage = page.minus(1)
         }
         if (page == 1) {
             prevPage = null
         }
 
-        if (page == 3) {
+        if (page == 4) {
             nextPage = null
         }
 
