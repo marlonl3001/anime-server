@@ -10,6 +10,7 @@ import org.koin.ktor.ext.inject
 import java.lang.IllegalArgumentException
 
 private const val DEFAULT_PAGE = 1
+private const val DEFAULT_LIMIT = 5
 
 fun Route.getAllHeroes() {
     val repository: HeroRepository by inject()
@@ -17,12 +18,17 @@ fun Route.getAllHeroes() {
     get("/heroes") {
         try {
             val page = call.request.queryParameters["page"]?.toInt() ?: DEFAULT_PAGE
-            //Define the range of pages available to send with response
-            require(page in 1..4)
+            val limit = call.request.queryParameters["limit"]?.toInt() ?: DEFAULT_LIMIT
 
-            val apiResponse = repository.getAllHeroes(page)
+            val apiResponse = repository.getAllHeroes(
+                actualPage = page,
+                limit = limit
+            )
 
-            call.respond(message = apiResponse)
+            call.respond(
+                message = apiResponse,
+                status = HttpStatusCode.OK
+            )
         } catch (e: NumberFormatException) {
             call.respond(
                 message = ApiResponse(success = false, message = "Only numbers allowed."),
